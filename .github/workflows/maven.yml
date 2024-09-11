@@ -54,6 +54,5 @@ jobs:
         script: |
           docker stop campeonatoo
           docker rm --force campeonatoo
-          docker run -d -p 8080:8080 --network=rede --name campeonatoo
-          danielprado99/campeonatoo-ci:${{ github.sha }}
+          docker run -d -p 8080:8080 --network=rede --name campeonatoo danielprado99/campeonatoo-ci:${{ github.sha }}
 
